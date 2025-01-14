@@ -76,9 +76,13 @@
     }
 
     .hero-content h1 {
-        font-size: 3.5rem !important;
-        line-height: 4rem;
+        font-size: 2.5rem !important;
+        line-height: 3rem;
         margin-bottom: 12px;
+    }
+
+    .hero-content p {
+    display: none;
     }
 
     .mobile-button {
