@@ -1,0 +1,135 @@
+:root {
+  --deep-grey: #212121;
+  --grey: #C4C4C4;
+  --medium-grey: #A7A7A7;
+}
+
+.form-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-back {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 25px;
+  filter: invert(1);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.form-container {
+  width: 75%;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: #7e5bc4;
+  border-radius: 24px;
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  gap: 2rem;
+  & img {
+    max-width: 35%;
+    height: auto;
+  }
+  & #contact-form {
+    margin-bottom: 1.5rem;
+    width: 65%;
+  }
+  & h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.125rem;
+    letter-spacing: normal;
+    margin: 0;
+  }
+    & p {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        text-transform: none;
+    }
+}
+
+
+.form-label{
+  display:flex;
+  margin-bottom:20px;
+  width:100%;
+  background-color:var(--deep-grey);
+  border-radius:5px;
+  border:2px solid transparent;
+}
+
+.input{
+  width:100%;
+  border-radius:5px;
+  background-color:var(--deep-grey);
+  border:2px solid transparent;
+  outline:none;
+  font-size:0.9em;
+  padding:25px 10px 10px;
+  font-weight:600;
+  color:var(--grey);
+}
+
+.form-label span{
+  position:absolute;
+  font-size:0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--medium-grey);
+  margin:20px;
+  cursor:text;
+  transition: all 200ms ease;
+}
+
+.form-label:focus-within{
+  border: 2px solid var(--grey);
+}
+
+
+.form-label .span-active{
+  font-size: 0.7em;
+  margin: 8px;
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 1rem;
+  font-weight: 900;
+  font-size: 1rem;
+  border: #fff solid 2px;
+  &:hover {
+    background-color: var(--deep-grey);
+    color: var(--primary);
+    border: var(--deep-grey) solid 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    padding: 1rem;
+    & img {
+      max-width: 55%;
+    }
+    & h1 {
+      font-size: 2.5rem;
+    }
+    & #contact-form {
+      width: 100%;
+  }
+}
+}
